@@ -1,0 +1,20 @@
+.table {
+  input + label {
+    position: relative;
+  }
+  input:hover + label::before {
+    background-color: $borderdarker;
+  }
+  input+label::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    left: -40px;
+    background-color: $borderlighter;
+  }
+  input:checked + label::before {
+    background: url("../image/checkOn.svg"), $borderdarker;
+  }
+}

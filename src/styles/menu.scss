@@ -1,0 +1,131 @@
+.menu {
+  width: 100%;
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 15px;
+    min-height: 40px;
+    justify-content: space-between;
+    .buttonsOne{
+      & > input {
+        margin-right: 20px;
+      }
+    }
+    .buttonsTwo {
+      a {
+        padding: 0 20px;
+      }
+      a:first-child {
+        margin-right: 23px;
+        padding-bottom: 2px;
+      }
+      a:nth-child(2n) {
+        padding-bottom: 3px;
+        padding-left: 18px;
+      }
+    }
+    .buttonsOne, .buttonsTwo {
+      min-height: 40px;
+      align-self: center;
+      display: flex;
+      flex-wrap: wrap;
+      & > * {
+        @media screen and (max-width: 970px){
+          flex-grow: 1;
+          margin: 0.5rem auto ;
+        }
+      }
+      input {
+        font-size: 16px;
+        line-height: 11px;
+        border: 1px solid $borderdarker;
+        border-radius: 5px;
+        padding-left: 16px;
+        padding-bottom: 4px;
+        opacity: 0.7;
+        min-width: 240px;
+        &:focus {
+          border: 1px solid $pink;
+          outline: none;
+        }
+        &:hover {
+          border: 1px solid $lightgray;
+        }
+      }
+      .radios {
+        line-height: 9px;
+        padding: 0;
+        display: flex;
+        border-radius: 10px;
+        border: 1px solid $borderlighter;
+        label {
+          @media screen and (max-width: 800px){
+            flex-grow: 1;
+          }
+          padding: 12px 0;
+          min-width: 105px;
+          border: 1px solid $borderlighter;
+          &:hover {
+            cursor: pointer;
+            border: 1px solid $borderdarker
+          }
+        }
+      }
+      a {
+        font-family: 'Harmonia', sans-serif;
+        font-size: 16px;
+        line-height: 11px;
+        color: black;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        min-width: max-content;
+        &:first-child {
+          &:hover {border: 1px solid $borderdarker}
+          border: 1px solid $border;
+        }
+        &:nth-child(2n) {
+          border:1px solid $pink;
+          color: white;
+          background-color:  $pink;
+          &:hover {
+            box-shadow: 0 3px 7px 0 $pink-shadow;
+          }
+        }
+      }
+    }
+
+  }
+  .info {
+    background-color: $colorInfo;
+    padding: 15px 50px 18px 50px;
+    margin: 28px 0;
+    text-align: center;
+    @media screen and (max-width: 600px) {
+      line-height: 25px;
+    }
+    span:first-child {
+      font-size: 12px;
+      line-height: 8px;
+      background: linear-gradient(to right,$colorPercent 50%, white 50%);
+      padding: 1px 0 2px 6px;
+      border-radius: 5px;
+      margin-right: 46px;
+    }
+    span:nth-child(2n) {
+      font-size: 14px;
+      line-height: 9px;
+      color: $gray;
+      position: relative;
+    }
+    span:nth-child(2n)::before {
+      content: url("../image/icon.svg");
+      position: absolute;
+      left: -24px;
+      top: 3px;
+    }
+  }
+}
+
